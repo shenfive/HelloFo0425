@@ -17,6 +17,7 @@
 		BA88FA152453CDF20034EC5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */; };
 		BA88FA17245405720034EC5E /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA16245405720034EC5E /* PageTwoViewController.swift */; };
 		BA88FA1924541B510034EC5E /* PageThreeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA1824541B510034EC5E /* PageThreeViewController.swift */; };
+		BA88FA1B2454336D0034EC5E /* MyTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA1A2454336D0034EC5E /* MyTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA88FA16245405720034EC5E /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
 		BA88FA1824541B510034EC5E /* PageThreeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageThreeViewController.swift; sourceTree = "<group>"; };
+		BA88FA1A2454336D0034EC5E /* MyTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTableViewCell.swift; sourceTree = "<group>"; };
 		D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloFo0425.release.xcconfig"; path = "Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425.release.xcconfig"; sourceTree = "<group>"; };
 		FBF4517B56E1734492CCC009 /* Pods_HelloFo0425.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloFo0425.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -96,6 +98,7 @@
 				BA88FA0E2453CD730034EC5E /* Info.plist */,
 				BA88FA16245405720034EC5E /* PageTwoViewController.swift */,
 				BA88FA1824541B510034EC5E /* PageThreeViewController.swift */,
+				BA88FA1A2454336D0034EC5E /* MyTableViewCell.swift */,
 			);
 			path = HelloFo0425;
 			sourceTree = "<group>";
@@ -221,6 +224,7 @@
 				BA88FA052453CD720034EC5E /* ViewController.swift in Sources */,
 				BA88FA012453CD720034EC5E /* AppDelegate.swift in Sources */,
 				BA88FA032453CD720034EC5E /* SceneDelegate.swift in Sources */,
+				BA88FA1B2454336D0034EC5E /* MyTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
