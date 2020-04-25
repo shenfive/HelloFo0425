@@ -10,13 +10,18 @@ import UIKit
 import Firebase
 
 class ViewController: UIViewController {
-
     
     var ref:DatabaseReference!
     var db:Database!
     
+    @IBOutlet weak var nickNameTF: UITextField!
+    @IBOutlet weak var status: UILabel!
+    @IBOutlet weak var startBut: UIButton!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        
         Auth.auth().signInAnonymously { (result, error) in
             if error != nil{
                 print("無法登入:\(error?.localizedDescription)")
@@ -25,19 +30,25 @@ class ViewController: UIViewController {
             }
         }
         
+        Auth.auth().addStateDidChangeListener { (auth, user) in
+            if user != nil{
+                self.status.text = "己連線"
+            }else{
+                self.status.text = "未連線"
+            }
+        }
+        
+        
+        
         db = Database.database()
         ref = db.reference()
                 
         
-        ref.child("appdefult/codename").observe(.value) { (snapshot) in
-            print("Value is \(snapshot.value as? String)")
-        }
-        
-        
 
-        
     }
-
+    @IBAction func goNextPage(_ sender: Any) {
+    }
+    
 
 }
 
