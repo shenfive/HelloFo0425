@@ -14,8 +14,8 @@ class PageTwoViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("nickname is:\(nickName)")
-        // Do any additional setup after loading the view.
+        
+        self.title = "討論區清單" 
     }
     
 
