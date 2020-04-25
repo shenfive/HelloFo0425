@@ -32,8 +32,8 @@ class ViewController: UIViewController {
         ref.child("appdefult/codename").observeSingleEvent(of: .value) { (snapshot) in
             print("codename is :\(snapshot.value as! String)")
         }
-        
-        ref.child("newdata/one").setValue("Hello Data")
+        let data:[String:Any] = ["name":"Danny","age":18]
+        ref.child("newdata/three").setValue(data)
         
         
     }
