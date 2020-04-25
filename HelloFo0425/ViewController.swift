@@ -75,6 +75,7 @@ class ViewController: UIViewController {
         
         UserDefaults.standard.set(nickname, forKey: "nickname")
         UserDefaults.standard.synchronize()
+        
         self.performSegue(withIdentifier: "goPage2", sender: self)
     }
 }

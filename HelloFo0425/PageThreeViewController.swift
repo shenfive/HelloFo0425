@@ -7,27 +7,43 @@
 //
 
 import UIKit
+import Firebase
 
 class PageThreeViewController: UIViewController {
 
     var foTitle = ""
     var foKey = ""
     
+    var ref:DatabaseReference!
+    
+    
+    @IBOutlet weak var msgTF: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.title = foTitle
+        
+        ref = Database.database().reference()
+        
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    @IBAction func newMsg(_ sender: Any) {
+        let msg = msgTF.text ?? ""
+        if msg.count < 2 {
+            showMsg(msg: "請輸入兩個字元以上的訊息")
+            return
+        }
+        let nickname = UserDefaults.standard.string(forKey: "nickname") ?? ""
+        
+        
+        let itemRef = ref.child("disc").child(foKey).childByAutoId()
+        let content:[String : Any] = ["msg":msg,"nickname":nickname,"time":ServerValue.timestamp()]
+        itemRef.setValue(content)
+        
+        
+        
     }
-    */
+    
 
 }
