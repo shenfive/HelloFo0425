@@ -7,11 +7,14 @@
 //
 
 import UIKit
+import Firebase
 
 class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDataSource {
 
 
+    var ref:DatabaseReference!
     var nickName = ""
+    var subs:[String] = []
     
     @IBOutlet weak var foTableView: UITableView!
     override func viewDidLoad() {
@@ -19,6 +22,20 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
         self.title = "討論區清單"
         foTableView.delegate = self
         foTableView.dataSource = self
+        ref = Database.database().reference().child("subs")
+        
+        ref.observeSingleEvent(of: .value) { (snapshot) in
+            self.subs.removeAll()
+            for item in snapshot.children{
+                if let itemSnap = item as? DataSnapshot{
+                    self.subs.append(itemSnap.childSnapshot(forPath: "sub").value as! String)
+                }
+            }
+            print(self.subs)
+            
+            
+        }
+        
     }
    
     
