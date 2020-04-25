@@ -42,10 +42,22 @@ class ViewController: UIViewController {
         
         db = Database.database()
         ref = db.reference()
-                
-        
-
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        
+        switch segue.identifier {
+        case "goPage2":
+            let nextVC = segue.destination as! PageTwoViewController
+            nextVC.nickName = self.nickNameTF.text ?? ""
+        default:
+            break
+        }
+    }
+    
+    
+    
     @IBAction func goNextPage(_ sender: Any) {
         guard let nickname = nickNameTF.text else { return }
         
@@ -53,8 +65,7 @@ class ViewController: UIViewController {
             showMsg(msg: "必需輸入兩個以上字元")
             return
         }
-        
-        print("進到下一頁")
+        self.performSegue(withIdentifier: "goPage2", sender: self)
     }
 }
 

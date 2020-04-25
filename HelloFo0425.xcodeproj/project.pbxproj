@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,6 +15,7 @@
 		BA88FA0A2453CD730034EC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA092453CD730034EC5E /* Assets.xcassets */; };
 		BA88FA0D2453CD730034EC5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA0B2453CD730034EC5E /* LaunchScreen.storyboard */; };
 		BA88FA152453CDF20034EC5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */; };
+		BA88FA17245405720034EC5E /* PageTwoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA16245405720034EC5E /* PageTwoViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BA88FA0C2453CD730034EC5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA88FA0E2453CD730034EC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		BA88FA16245405720034EC5E /* PageTwoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PageTwoViewController.swift; sourceTree = "<group>"; };
 		D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloFo0425.release.xcconfig"; path = "Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425.release.xcconfig"; sourceTree = "<group>"; };
 		FBF4517B56E1734492CCC009 /* Pods_HelloFo0425.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloFo0425.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -50,7 +52,6 @@
 				604E8CD12DB872847C94ACE7 /* Pods-HelloFo0425.debug.xcconfig */,
 				D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -91,6 +92,7 @@
 				BA88FA092453CD730034EC5E /* Assets.xcassets */,
 				BA88FA0B2453CD730034EC5E /* LaunchScreen.storyboard */,
 				BA88FA0E2453CD730034EC5E /* Info.plist */,
+				BA88FA16245405720034EC5E /* PageTwoViewController.swift */,
 			);
 			path = HelloFo0425;
 			sourceTree = "<group>";
@@ -211,6 +213,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BA88FA17245405720034EC5E /* PageTwoViewController.swift in Sources */,
 				BA88FA052453CD720034EC5E /* ViewController.swift in Sources */,
 				BA88FA012453CD720034EC5E /* AppDelegate.swift in Sources */,
 				BA88FA032453CD720034EC5E /* SceneDelegate.swift in Sources */,
