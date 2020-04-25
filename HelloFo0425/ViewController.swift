@@ -33,7 +33,7 @@ class ViewController: UIViewController {
             print("codename is :\(snapshot.value as! String)")
         }
         let data:[String:Any] = ["name":"Danny","age":18]
-        ref.child("newdata/three").setValue(data)
+        ref.child("newdata/three").childByAutoId().setValue(data)
         
         
     }
