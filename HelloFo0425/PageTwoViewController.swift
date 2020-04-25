@@ -14,8 +14,8 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     var ref:DatabaseReference!
     var nickName = ""
-    var subs:[String] = []
     
+    var subs:[[String:String]] = []
     @IBOutlet weak var foTableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()        
@@ -28,12 +28,11 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
             self.subs.removeAll()
             for item in snapshot.children{
                 if let itemSnap = item as? DataSnapshot{
-                    self.subs.append(itemSnap.childSnapshot(forPath: "sub").value as! String)
-                }
+                    let sub = itemSnap.childSnapshot(forPath: "sub").value as! String
+                    let key = itemSnap.key
+                    self.subs.append(["key":key,"sub":sub])
             }
-            self.foTableView.reloadData()
-            
-            
+            self.foTableView.reloadData()  
         }
         
     }
@@ -47,7 +46,7 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = subs[indexPath.row]
+        cell.textLabel?.text = subs[indexPath.row]["sub"]
         return cell
     }
     
