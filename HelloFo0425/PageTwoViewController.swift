@@ -31,7 +31,7 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     self.subs.append(itemSnap.childSnapshot(forPath: "sub").value as! String)
                 }
             }
-            print(self.subs)
+            self.foTableView.reloadData()
             
             
         }
@@ -42,12 +42,12 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
     
     //MARK:TableView Delegate & DataSource
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return subs.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
-        cell.textLabel?.text = "line:\(indexPath.row)"
+        cell.textLabel?.text = subs[indexPath.row]
         return cell
     }
     
