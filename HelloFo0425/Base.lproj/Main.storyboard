@@ -91,6 +91,9 @@
                         <viewLayoutGuide key="safeArea" id="0Rs-Oi-iyb"/>
                     </view>
                     <navigationItem key="navigationItem" id="PxW-ye-RFh"/>
+                    <connections>
+                        <outlet property="foTableView" destination="k0x-bw-Fhg" id="udW-SZ-3M0"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esw-Br-8dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
