@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3EF637C01414EA919CA84505 /* Pods_HelloFo0425.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FBF4517B56E1734492CCC009 /* Pods_HelloFo0425.framework */; };
 		BA88FA012453CD720034EC5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA002453CD720034EC5E /* AppDelegate.swift */; };
 		BA88FA032453CD720034EC5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA022453CD720034EC5E /* SceneDelegate.swift */; };
 		BA88FA052453CD720034EC5E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA88FA042453CD720034EC5E /* ViewController.swift */; };
 		BA88FA082453CD720034EC5E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA062453CD720034EC5E /* Main.storyboard */; };
 		BA88FA0A2453CD730034EC5E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA092453CD730034EC5E /* Assets.xcassets */; };
 		BA88FA0D2453CD730034EC5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA0B2453CD730034EC5E /* LaunchScreen.storyboard */; };
+		BA88FA152453CDF20034EC5E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		604E8CD12DB872847C94ACE7 /* Pods-HelloFo0425.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloFo0425.debug.xcconfig"; path = "Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425.debug.xcconfig"; sourceTree = "<group>"; };
 		BA88F9FD2453CD720034EC5E /* HelloFo0425.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloFo0425.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BA88FA002453CD720034EC5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BA88FA022453CD720034EC5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,9 @@
 		BA88FA092453CD730034EC5E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BA88FA0C2453CD730034EC5E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BA88FA0E2453CD730034EC5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HelloFo0425.release.xcconfig"; path = "Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425.release.xcconfig"; sourceTree = "<group>"; };
+		FBF4517B56E1734492CCC009 /* Pods_HelloFo0425.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HelloFo0425.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,17 +37,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3EF637C01414EA919CA84505 /* Pods_HelloFo0425.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		41D7B802182DEF4045DFF8AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				604E8CD12DB872847C94ACE7 /* Pods-HelloFo0425.debug.xcconfig */,
+				D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		55C506DE928DD7A7149072BB /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				FBF4517B56E1734492CCC009 /* Pods_HelloFo0425.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		BA88F9F42453CD720034EC5E = {
 			isa = PBXGroup;
 			children = (
 				BA88F9FF2453CD720034EC5E /* HelloFo0425 */,
 				BA88F9FE2453CD720034EC5E /* Products */,
+				41D7B802182DEF4045DFF8AD /* Pods */,
+				55C506DE928DD7A7149072BB /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -56,6 +83,7 @@
 		BA88F9FF2453CD720034EC5E /* HelloFo0425 */ = {
 			isa = PBXGroup;
 			children = (
+				BA88FA142453CDF20034EC5E /* GoogleService-Info.plist */,
 				BA88FA002453CD720034EC5E /* AppDelegate.swift */,
 				BA88FA022453CD720034EC5E /* SceneDelegate.swift */,
 				BA88FA042453CD720034EC5E /* ViewController.swift */,
@@ -74,9 +102,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = BA88FA112453CD730034EC5E /* Build configuration list for PBXNativeTarget "HelloFo0425" */;
 			buildPhases = (
+				32720D549231D7E4A2416089 /* [CP] Check Pods Manifest.lock */,
 				BA88F9F92453CD720034EC5E /* Sources */,
 				BA88F9FA2453CD720034EC5E /* Frameworks */,
 				BA88F9FB2453CD720034EC5E /* Resources */,
+				8BF59893E84C6F1CB5219485 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -126,12 +156,55 @@
 			buildActionMask = 2147483647;
 			files = (
 				BA88FA0D2453CD730034EC5E /* LaunchScreen.storyboard in Resources */,
+				BA88FA152453CDF20034EC5E /* GoogleService-Info.plist in Resources */,
 				BA88FA0A2453CD730034EC5E /* Assets.xcassets in Resources */,
 				BA88FA082453CD720034EC5E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		32720D549231D7E4A2416089 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HelloFo0425-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BF59893E84C6F1CB5219485 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HelloFo0425/Pods-HelloFo0425-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BA88F9F92453CD720034EC5E /* Sources */ = {
@@ -282,6 +355,7 @@
 		};
 		BA88FA122453CD730034EC5E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 604E8CD12DB872847C94ACE7 /* Pods-HelloFo0425.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -300,6 +374,7 @@
 		};
 		BA88FA132453CD730034EC5E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = D0B0DEFB7EB7C5A3FC0CA5CE /* Pods-HelloFo0425.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
