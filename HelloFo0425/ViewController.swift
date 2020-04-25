@@ -13,6 +13,7 @@ class ViewController: UIViewController {
 
     
     var ref:DatabaseReference!
+    var db:Database!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,12 +25,15 @@ class ViewController: UIViewController {
             }
         }
         
-        ref = Database.database().reference()
+        db = Database.database()
+        ref = db.reference()
+                
         
-        ref.child("appdefult").child("codename").observeSingleEvent(of: .value) { (snapshot) in
+        ref.child("appdefult/codename").observeSingleEvent(of: .value) { (snapshot) in
             print("codename is :\(snapshot.value as! String)")
         }
         
+        ref.child("newdata/one").setValue("Hello Data")
         
         
     }
