@@ -30,10 +30,12 @@ class ViewController: UIViewController {
                 
         
         ref.child("appdefult/codename").observeSingleEvent(of: .value) { (snapshot) in
-            print("codename is :\(snapshot.value as! String)")
+            print("codename is :\(snapshot.value as? String)")
         }
         let data:[String:Any] = ["name":"Danny","age":18]
-        ref.child("newdata/three").childByAutoId().setValue(data)
+        let dataRef = ref.child("newdata/three").childByAutoId()
+        dataRef.setValue(data)
+        dataRef.child("time").setValue(ServerValue.timestamp())
         
         
     }
