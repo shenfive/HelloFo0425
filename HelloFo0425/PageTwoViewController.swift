@@ -14,6 +14,7 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
 
     var ref:DatabaseReference!
     var nickName = ""
+    var selectedID = 0
     
     var subs:[[String:String]] = []
     @IBOutlet weak var foTableView: UITableView!
@@ -37,6 +38,19 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
         }
     }
    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        switch segue.identifier {
+        case "goPage3":
+            let nextVC = segue.destination as! PageThreeViewController
+            
+            
+            
+            nextVC.foTitle = subs[selectedID]["sub"] ?? ""
+            nextVC.foKey = subs[selectedID]["key"] ?? ""
+        default:
+            break
+        }
+    }
     
     
     //MARK:TableView Delegate & DataSource
@@ -51,6 +65,7 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.selectedID = indexPath.row
         performSegue(withIdentifier: "goPage3", sender: self)
     }
     

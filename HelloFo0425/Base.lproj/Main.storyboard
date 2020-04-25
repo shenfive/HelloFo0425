@@ -100,10 +100,10 @@
             </objects>
             <point key="canvasLocation" x="2166" y="98"/>
         </scene>
-        <!--View Controller-->
+        <!--Page Three View Controller-->
         <scene sceneID="nmx-fo-5YO">
             <objects>
-                <viewController id="Yro-fg-3X8" sceneMemberID="viewController">
+                <viewController id="Yro-fg-3X8" customClass="PageThreeViewController" customModule="HelloFo0425" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="mdh-Rh-odG">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -10,10 +10,13 @@ import UIKit
 
 class PageThreeViewController: UIViewController {
 
+    var foTitle = ""
+    var foKey = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
+        self.title = foTitle
     }
     
 
