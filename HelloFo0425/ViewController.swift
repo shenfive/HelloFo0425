@@ -11,6 +11,9 @@ import Firebase
 
 class ViewController: UIViewController {
 
+    
+    var ref:DatabaseReference!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         Auth.auth().signInAnonymously { (result, error) in
@@ -21,9 +24,11 @@ class ViewController: UIViewController {
             }
         }
         
+        ref = Database.database().reference()
         
-        
-        
+        ref.child("appdefult").child("codename").observeSingleEvent(of: .value) { (snapshot) in
+            print("codename is :\(snapshot.value as! String)")
+        }
         
         
         
