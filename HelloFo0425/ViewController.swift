@@ -21,6 +21,7 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.title = "首頁"
         
         Auth.auth().signInAnonymously { (result, error) in
             if error != nil{

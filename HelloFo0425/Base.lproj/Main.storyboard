@@ -93,11 +93,28 @@
                     <navigationItem key="navigationItem" id="PxW-ye-RFh"/>
                     <connections>
                         <outlet property="foTableView" destination="k0x-bw-Fhg" id="udW-SZ-3M0"/>
+                        <segue destination="Yro-fg-3X8" kind="show" identifier="goPage3" id="qAR-p3-MfS"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="esw-Br-8dh" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2166" y="98"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="nmx-fo-5YO">
+            <objects>
+                <viewController id="Yro-fg-3X8" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mdh-Rh-odG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="JLb-dA-SKx"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="wf5-ev-AB6"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SbV-3U-FzY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3188" y="93"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="yT2-vI-NGc">

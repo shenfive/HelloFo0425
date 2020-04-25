@@ -31,10 +31,10 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
                     let sub = itemSnap.childSnapshot(forPath: "sub").value as! String
                     let key = itemSnap.key
                     self.subs.append(["key":key,"sub":sub])
+                }
             }
-            self.foTableView.reloadData()  
+            self.foTableView.reloadData()
         }
-        
     }
    
     
@@ -49,6 +49,11 @@ class PageTwoViewController: UIViewController,UITableViewDelegate,UITableViewDat
         cell.textLabel?.text = subs[indexPath.row]["sub"]
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "goPage3", sender: self)
+    }
+    
     
 
 }
