@@ -29,14 +29,12 @@ class ViewController: UIViewController {
         ref = db.reference()
                 
         
-        ref.child("appdefult/codename").observeSingleEvent(of: .value) { (snapshot) in
-            print("codename is :\(snapshot.value as? String)")
+        ref.child("appdefult/codename").observe(.value) { (snapshot) in
+            print("Value is \(snapshot.value as? String)")
         }
-        let data:[String:Any] = ["name":"Danny","age":18]
-        let dataRef = ref.child("newdata/three").childByAutoId()
-        dataRef.setValue(data)
-        dataRef.child("time").setValue(ServerValue.timestamp())
         
+        
+
         
     }
 
