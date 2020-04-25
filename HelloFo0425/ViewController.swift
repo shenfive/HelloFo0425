@@ -33,12 +33,12 @@ class ViewController: UIViewController {
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if user != nil{
                 self.status.text = "己連線"
+                self.startBut.isEnabled = true
             }else{
                 self.status.text = "未連線"
+                self.startBut.isEnabled = false
             }
         }
-        
-        
         
         db = Database.database()
         ref = db.reference()
@@ -47,8 +47,23 @@ class ViewController: UIViewController {
 
     }
     @IBAction func goNextPage(_ sender: Any) {
+        guard let nickname = nickNameTF.text else { return }
+        
+        if nickname.count < 2 {
+            showMsg(msg: "必需輸入兩個以上字元")
+            return
+        }
+        
+        print("進到下一頁")
     }
-    
+}
 
+extension UIViewController{
+    func showMsg(msg:String){
+        let alert = UIAlertController(title: "通知", message: msg, preferredStyle: .alert)
+        let okBut = UIAlertAction(title: "我知道了", style: .default, handler: nil)
+        alert.addAction(okBut)
+        self.present(alert, animated: true, completion: nil)
+    }
 }
 
