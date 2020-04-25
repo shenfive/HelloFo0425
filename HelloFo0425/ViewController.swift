@@ -21,6 +21,11 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        if let lastInputName = UserDefaults.standard.value(forKey: "nickname") as? String{
+            nickNameTF.text = lastInputName
+        }
+        
+        
         self.title = "首頁"
         
         Auth.auth().signInAnonymously { (result, error) in
@@ -66,6 +71,10 @@ class ViewController: UIViewController {
             showMsg(msg: "必需輸入兩個以上字元")
             return
         }
+        
+        
+        UserDefaults.standard.set(nickname, forKey: "nickname")
+        UserDefaults.standard.synchronize()
         self.performSegue(withIdentifier: "goPage2", sender: self)
     }
 }
